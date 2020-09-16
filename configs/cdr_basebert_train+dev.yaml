@@ -1,0 +1,71 @@
+# model
+dataset: cdr
+
+global_rep: true
+local_rep: true
+context_att: true
+
+query: global
+
+pretrain_l_m: bert-base  # bert-base, none,xlnet-base, xlnet-large
+lstm_encoder: false
+more_lstm: true
+
+# encoder
+emb_method: true # true for load_embeds
+word_dim: 200
+lstm_dim: 256
+out_dim: 256
+type_dim: 20
+dist_dim: 20
+finaldist: true
+types: true
+bilstm_layers: 1
+rgcn_hidden_dim: 256
+rgcn_num_layers: 3
+gcn_in_drop: 0.2
+gcn_out_drop: 0.0
+
+# network
+batch: 16
+epoch: 200
+drop_i: 0.5 # 0.5
+drop_m: 0.0
+drop_o: 0.2 # 0.3
+att_head_num: 4
+att_dropout: 0.2
+lr: 0.0005
+bert_lr: 0.0000
+gc: 10
+reg: 0.0001
+opt: adam
+patience: 20
+unk_w_prob: 0.5
+min_w_freq: 1
+init_train_epochs: 0
+NA_NUM: 1.0  # 0.1==5:1
+mlp_layers: -1
+mlp_dim: 512
+
+# data based
+train_data: ./data/CDR/processed/train+dev_filter.data
+test_data: ./data/CDR/processed/test_filter.data
+embeds: ./data/CDR/PubMed-CDR.txt
+folder: ./results/cdr-test
+save_pred: test
+
+# options (chosen from parse input otherwise false)
+lowercase: true
+plot: false
+show_class: false
+early_stop: true
+save_model: true
+freeze_words: true
+
+# extra
+seed: 0
+shuffle_data: true
+label2ignore: 1:NR:2
+primary_metric: micro_f
+direction: l2r+r2l
+gpu: 0

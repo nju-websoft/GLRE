@@ -1,0 +1,9 @@
+torch>=1.1.0
+numpy
+recordtype
+yamlordereddictloader
+tabulate
+transformers
+scipy
+scikit-learn
+python>=3.6
