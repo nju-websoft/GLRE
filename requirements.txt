@@ -3,7 +3,7 @@ numpy
 recordtype
 yamlordereddictloader
 tabulate
-transformers
+transformers==2.11.0
 scipy
 scikit-learn
 python>=3.6

@@ -3,12 +3,12 @@ import os
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--gpu', type=str, default='0')
-parser.add_argument('--batch', type=int, default=16)
+parser.add_argument('--batch', type=int, default=8)
 inp = parser.parse_args()
 
 
 config_path = './configs/docred_basebert.yaml'
-output_path = './results/docred-dev/docred_basebert/'
+output_path = './results/docred-dev/docred_basebert_full/'
 os.system('CUDA_VISIBLE_DEVICES=' + str(inp.gpu)+ ' python ./src/main.py --train --batch=' + str(inp.batch)+ ' --test_data=./data/DocRED/processed/dev.data'
           ' --config_file=' + config_path+ ' --save_pred=dev --output_path=' + output_path)
 

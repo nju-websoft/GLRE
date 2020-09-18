@@ -7,7 +7,7 @@ parser.add_argument('--batch', type=int, default=16)
 inp = parser.parse_args()
 
 
-output_path = './results/cdr-test/cdr_basebert_train+dev/'
+output_path = './results/cdr-test/cdr_basebert_train+dev_full/'
 config_path = './configs/cdr_basebert_train+dev.yaml'
 os.system('CUDA_VISIBLE_DEVICES=' + str(inp.gpu) + ' python ./src/main.py --train --batch=' + str(inp.batch)+' --test_data=./data/CDR/processed/test_filter.data'
           ' --config_file=' + config_path+ ' --save_pred=test --output_path=' + output_path)
