@@ -69,12 +69,14 @@ And use the following code to preprocess the DocRED dataset.
                        --output_file ../data/DocRED/processed/train_annotated.data \
     
 #### Train & Test
+First, you should download biobert_base and bert_base from [figshare]() and place them in the GLRE directory.
+
 The default hyper-parameters are in the `configs` directory and the train&test scripts are in the `scripts` directory. 
 Besides, the `run_cdr_train+dev.py` script corresponds to the CDR under `traing + dev` setting.
 
-    python run_cdr.py
-    python run_cdr_train+dev.py
-    python run_docred.py
+    python scripts/run_cdr.py
+    python scripts/run_cdr_train+dev.py
+    python scripts/run_docred.py
 
 #### Evaluation
 
