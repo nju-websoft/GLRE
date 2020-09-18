@@ -63,7 +63,7 @@ Specifically, we preprocessed the CDR dataset following [Edge-oriented Graph](ht
     In order to process the datasets, they should first be transformed into the PubTator format. The run the processing scripts as follows:
     $ sh process_cdr.sh
 
-Let's using the following code to preprocess the DocRED dataset.
+And use the following code to preprocess the DocRED dataset.
     
     python docRedProcess.py --input_file ../data/DocRED/train_annotated.json \
                        --output_file ../data/DocRED/processed/train_annotated.data \
