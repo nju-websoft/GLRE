@@ -12,21 +12,21 @@
 ```
 GLRE/
 ├─ configs/
-    ├── cdr_basebert.yaml: config file for CDR dataset under ``Train'' setting
-    ├── cdr_basebert_train+dev.yaml: config file for CDR dataset under ``Train+Dev'' setting
-    ├── docred_basebert.yaml: config file for DocRED dataset under ``Train'' setting
+    ├── cdr_basebert.yaml: config file for CDR dataset under "Train" setting
+    ├── cdr_basebert_train+dev.yaml: config file for CDR dataset under "Train+Dev" setting
+    ├── docred_basebert.yaml: config file for DocRED dataset under "Train" setting
 ├─ data/: raw data and preprocessed data about CDR and DocRED dataset
     ├── CDR/
     ├── DocRED/
-├─ data_processing/: the data preprocessing scripts
-├─ results/: the pre-trained models and results 
-├─ scripts/: the run scripts
+├─ data_processing/: data preprocessing scripts
+├─ results/: pre-trained models and results 
+├─ scripts/: running scripts
 ├─ src/
     ├── data/: read data and convert to batch
-    ├── models/: the core module to implement GLRE
-    ├── nnet/: the sub layers to implement GLRE
+    ├── models/: core module to implement GLRE
+    ├── nnet/: sub-layers to implement GLRE
     ├── utils/: utility function
-    ├── main.py:
+    ├── main.py
 ```
 
 ### Dependencies
@@ -42,11 +42,11 @@ GLRE/
 
 ### Usage
 #### Datasets & Pre-processing
-The datasets include CDR and DocRED. The data are located in `data/CDR` directory and `data/DocRED` directory respectively. 
-The pre-processing scripts are located in the `data_processing` directory and the pre-processing results are located in the `data/CDR/processed` directory and `data/DocRED/processed` directory respectively.
+The datasets include CDR and DocRED. The data are located in `data/CDR` directory and `data/DocRED` directory, respectively. 
+The pre-processing scripts are located in the `data_processing` directory, and the pre-processing results are located in the `data/CDR/processed` directory and `data/DocRED/processed` directory, respectively.
 The pre-trained models are in the `results` directory.
 
-Specifically, we preprocessed the CDR dataset following [Edge-oriented Graph](https://github.com/fenchri/edge-oriented-graph).
+Specifically, we pre-processed the CDR dataset following [edge-oriented graph](https://github.com/fenchri/edge-oriented-graph):
 
     Download the GENIA Tagger and Sentence Splitter:
     $ cd data_processing
@@ -63,7 +63,7 @@ Specifically, we preprocessed the CDR dataset following [Edge-oriented Graph](ht
     In order to process the datasets, they should first be transformed into the PubTator format. The run the processing scripts as follows:
     $ sh process_cdr.sh
 
-And use the following code to preprocess the DocRED dataset.
+Then, please use the following code to preprocess the DocRED dataset:
     
     python docRedProcess.py --input_file ../data/DocRED/train_annotated.json \
                        --output_file ../data/DocRED/processed/train_annotated.data \
@@ -80,7 +80,7 @@ Besides, the `run_cdr_train+dev.py` script corresponds to the CDR under `traing 
 
 #### Evaluation
 
-For CDR, you can evaluate the result using the evaluation script as follows:
+For CDR, you can evaluate the results using the evaluation script as follows:
 
 
     python utils/evaluate_cdr.py --gold ../data/CDR/processed/test.gold --pred ../results/cdr-dev/cdr_basebert_full/test.preds --label 1:CID:2
