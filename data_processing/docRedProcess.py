@@ -39,7 +39,7 @@ def main(input_file, output_file, suffix):
             document_list.append(" ".join(x))
 
         document = "\n".join(document_list)
-        print("gg", str(document))
+        # print("gg", str(document))
         assert "   " not in document
         assert "||" not in p and "\t" not in p
 
