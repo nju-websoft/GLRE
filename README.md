@@ -46,7 +46,7 @@ The datasets include CDR and DocRED. The data are located in `data/CDR` director
 The pre-processing scripts are located in the `data_processing` directory, and the pre-processing results are located in the `data/CDR/processed` directory and `data/DocRED/processed` directory, respectively.
 The pre-trained models are in the `results` directory.
 
-Specifically, we pre-processed the CDR dataset following [Edge-oriented Graph](https://github.com/fenchri/edge-oriented-graph):
+Specifically, we pre-processed the CDR dataset following [edge-oriented graph](https://github.com/fenchri/edge-oriented-graph):
 
     Download the GENIA Tagger and Sentence Splitter:
     $ cd data_processing
