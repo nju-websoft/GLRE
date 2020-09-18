@@ -2,11 +2,7 @@
 python docRedProcess.py --input_file ../data/DocRED/train_annotated.json \
                        --output_file ../data/DocRED/processed/train_annotated.data \
 """
-import ast
 import json
-from stanfordcorenlp import StanfordCoreNLP
-import numpy as np
-import os
 
 max_length = 512
 max_sen_length = 200
