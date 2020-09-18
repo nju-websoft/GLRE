@@ -12,21 +12,21 @@
 ```
 GLRE/
 ├─ configs/
-    ├── cdr_basebert.yaml: config file for CDR dataset under ``Train'' setting
-    ├── cdr_basebert_train+dev.yaml: config file for CDR dataset under ``Train+Dev'' setting
-    ├── docred_basebert.yaml: config file for DocRED dataset under ``Train'' setting
+    ├── cdr_basebert.yaml: config file for CDR dataset under "Train" setting
+    ├── cdr_basebert_train+dev.yaml: config file for CDR dataset under "Train+Dev" setting
+    ├── docred_basebert.yaml: config file for DocRED dataset under "Train" setting
 ├─ data/: raw data and preprocessed data about CDR and DocRED dataset
     ├── CDR/
     ├── DocRED/
-├─ data_processing/: the data preprocessing scripts
-├─ results/: the pre-trained models and results 
-├─ scripts/: the run scripts
+├─ data_processing/: data preprocessing scripts
+├─ results/: pre-trained models and results 
+├─ scripts/: running scripts
 ├─ src/
     ├── data/: read data and convert to batch
-    ├── models/: the core module to implement GLRE
-    ├── nnet/: the sub layers to implement GLRE
+    ├── models/: core module to implement GLRE
+    ├── nnet/: sub-layers to implement GLRE
     ├── utils/: utility function
-    ├── main.py:
+    ├── main.py
 ```
 
 ### Dependencies
